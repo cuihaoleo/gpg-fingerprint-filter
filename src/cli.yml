@@ -1,0 +1,38 @@
+name: NAME
+args:
+  - pattern:
+      required: true
+      index: 1
+      help: Regex for the key fingerprint to match (like 'F{8}$')
+  - output:
+      required: true
+      index: 2
+      help: Output path of the private key (in PEM format)
+  - key-size:
+      long: key-size
+      short: k
+      takes_value: true
+      default_value: "2048"
+      value_name: N
+      help: N bits in the RSA key
+  - time-offset:
+      long: time-offset
+      short: t
+      takes_value: true
+      default_value: "10368000"
+      value_name: N
+      help: Try key timestamp from N seconds in the past to now
+  - jobs:
+      long: jobs
+      short: j
+      takes_value: true
+      default_value: "AUTO"
+      value_name: N
+      help: Run N threads in parallel
+  - print-interval:
+      long: print-interval
+      short: p
+      takes_value: true
+      default_value: "10"
+      value_name: N
+      help: Print hash speed every N seconds
